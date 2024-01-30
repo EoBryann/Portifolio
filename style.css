@@ -8,7 +8,7 @@
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
-  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.15);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 .light {
@@ -60,6 +60,9 @@ body * {
 }
 .light #switch button {
   animation: slide-in 0.5s forwards;
+}
+#switch button:hover {
+  outline: 8px solid var(--surface-color-hover);
 }
 #switch button {
   width: 32px;
