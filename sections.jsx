@@ -153,28 +153,40 @@ function About() {
 function Experience() {
   const jobs = [
     {
-      company: 'Cenosico Aduaneiras',
-      role: 'Desenvolvedor Full-stack',
-      period: '2024 — Atual',
+      company: 'CENOFISCO',
+      sub: 'Centro de Orientação Fiscal · Presencial',
+      role: 'Desenvolvedor .NET',
+      period: 'ago 2025 — Atual',
       current: true,
-      desc: 'Redesenho e desenvolvimento do ecossistema web da empresa. Criação de novos sites institucionais modernos e sistemas internos, substituindo stacks legadas por tecnologias atuais.',
-      tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+      desc: 'Desenvolvimento e manutenção de aplicações críticas no setor financeiro. Foco em C# com .NET Framework e .NET Core, aplicando princípios SOLID e Clean Code. Integração com Oracle e SQL Server (Stored Procedures para grandes volumes), cache distribuído com Redis e APIs RESTful com ASP.NET Web API. Colaboração em SPAs com Angular e React.',
+      tags: ['.NET Core', 'C#', 'ASP.NET Web API', 'Oracle', 'SQL Server', 'Redis', 'Entity Framework', 'Angular'],
     },
     {
       company: 'Wise System',
-      role: 'Desenvolvedor Web',
-      period: '2022 — 2024',
+      sub: 'ERP · Segurança e Medicina do Trabalho · São Paulo',
+      role: 'Desenvolvedor Web → (antes) Suporte Técnico',
+      period: 'ago 2023 — jun 2025 · 1a 11m',
       current: false,
-      desc: 'Desenvolvimento de sites e sistemas para clientes. Construção de interfaces e integrações com APIs, com transição progressiva de JavaScript vanilla para React + TypeScript.',
-      tags: ['JavaScript', 'React', 'C#', '.NET', 'REST API'],
+      desc: 'Progressão de estágio em suporte técnico (ago 2023 – ago 2024) para desenvolvedor web full-time (ago 2024 – jun 2025). Desenvolvimento de funcionalidades em C# com ASP.NET MVC e Razor Pages, APIs RESTful, interfaces com HTML/CSS/JavaScript/Bootstrap e banco SQL Server. Colaboração com design via Figma.',
+      tags: ['C#', 'ASP.NET MVC', 'Razor Pages', 'SQL Server', 'JavaScript', 'Bootstrap', 'Git', 'Figma'],
+    },
+    {
+      company: 'Agência Acsa',
+      sub: 'Freelancer · Remoto',
+      role: 'Desenvolvedor Web',
+      period: 'jun 2024 — Atual',
+      current: true,
+      desc: 'Criação de sites e landing pages para clientes da agência. Stack variada: React, JavaScript, C#, CSS, HTML, SQL Server, hospedagem e integrações com IA.',
+      tags: ['React', 'JavaScript', 'C#', 'CSS', 'HTML', 'Figma'],
     },
     {
       company: 'Ignis MKT / DNA Ignis',
-      role: 'Fundador & Desenvolvedor Full-stack',
+      sub: 'Fundador · São Paulo',
+      role: 'Desenvolvedor Full-stack',
       period: '2023 — Atual',
       current: true,
-      desc: 'Criação e operação do ecossistema SaaS DNA Ignis: CRM multi-tenant, chatbot de pré-vendas com IA, hub interno e landing page — todos em produção com infra Docker própria.',
-      tags: ['React', 'TypeScript', 'Supabase', 'Docker', 'Deno', 'PostgreSQL'],
+      desc: 'Criação e operação do ecossistema SaaS DNA Ignis: CRM multi-tenant (27 páginas, 83 hooks, 25 Edge Functions), chatbot de pré-vendas com IA e hub de gestão interno — todos em produção com 11 containers Docker, Nginx e Cloudflare.',
+      tags: ['React 18', 'TypeScript', 'Supabase', 'Docker', 'Deno', 'PostgreSQL', 'Nginx'],
     },
   ];
 
@@ -196,6 +208,7 @@ function Experience() {
                   <div>
                     <h3 className="exp-company">{job.company}</h3>
                     <div className="exp-role">{job.role}</div>
+                    {job.sub && <div style={{fontSize:12, color:'var(--text-3)', marginTop:2}}>{job.sub}</div>}
                   </div>
                   <span className="exp-period" style={{color: job.current ? 'var(--accent)' : 'var(--text-3)'}}>{job.period}</span>
                 </div>
