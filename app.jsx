@@ -1,4 +1,4 @@
-/* global React, ReactDOM, Icon, Hero, About, Experience, Stack, Projects, Contact, Ticker, ParticleField, CustomCursor, TweaksPanel, useTweaks, TweakSection, TweakColor, TweakToggle, TweakSlider */
+/* global React, ReactDOM, Icon, Hero, About, Experience, Education, Stack, Projects, Contact, Ticker, ParticleField, CustomCursor, TweaksPanel, useTweaks, TweakSection, TweakColor, TweakToggle, TweakSlider */
 const { useEffect, useState, useRef } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -16,6 +16,7 @@ function Nav() {
       <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#formacao">Formação</a></li>
         <li><a href="#stack">Stack</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -107,6 +108,7 @@ function App() {
         <Hero/>
         <About/>
         <Experience/>
+        <Education/>
         <Stack/>
         <Projects/>
         <Contact/>

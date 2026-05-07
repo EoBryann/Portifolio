@@ -225,6 +225,57 @@ function Experience() {
   );
 }
 
+// ============ EDUCATION ============
+function Education() {
+  const edu = [
+    {
+      institution: 'Universidade Paulista — UNIP',
+      degree: 'CST · Análise e Desenvolvimento de Sistemas',
+      period: 'fev 2023 — dez 2024',
+      desc: 'Formação em desenvolvimento de software com foco em programação, estrutura de dados, sistemas operacionais e projetos práticos em equipe.',
+      tags: ['ADS', 'Lógica de Programação', 'Sistemas Operacionais', 'Trabalho em Equipe'],
+    },
+    {
+      institution: 'ETEC — Escola Técnica Estadual de SP',
+      degree: 'Técnico Integrado · Automação Industrial',
+      period: 'fev 2019 — dez 2021',
+      desc: 'Curso técnico integrado com base em eletrônica, automação, programação de CLPs e sistemas de controle.',
+      tags: ['Automação', 'Eletrônica', 'CLP', 'Sistemas de Controle'],
+    },
+  ];
+
+  return (
+    <section id="formacao">
+      <div className="container">
+        <div className="reveal">
+          <div className="section-eyebrow">03 / Formação</div>
+          <h2 className="section-title">Base acadêmica por trás do <span className="accent">código.</span></h2>
+        </div>
+        <div className="exp-timeline" style={{marginTop: 40}}>
+          {edu.map((e, i) => (
+            <div className="exp-item reveal" key={e.institution} style={{'--d': `${i * 120}ms`}}>
+              <div className="exp-dot" style={{borderColor: i === 0 ? 'var(--blue)' : 'var(--border-strong)', background: i === 0 ? 'rgba(96,165,250,0.12)' : 'var(--surface-2)'}}></div>
+              <div className="exp-body">
+                <div className="exp-header">
+                  <div>
+                    <h3 className="exp-company">{e.institution}</h3>
+                    <div className="exp-role">{e.degree}</div>
+                  </div>
+                  <span className="exp-period" style={{color:'var(--text-3)'}}>{e.period}</span>
+                </div>
+                <p className="exp-desc">{e.desc}</p>
+                <div className="proj-stack" style={{marginTop: 12}}>
+                  {e.tags.map(t => <span key={t}>{t}</span>)}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ STACK ============
 function Stack() {
   const stack = [
@@ -245,7 +296,7 @@ function Stack() {
     <section id="stack">
       <div className="container">
         <div className="reveal">
-          <div className="section-eyebrow">03 / Stack</div>
+          <div className="section-eyebrow">04 / Stack</div>
           <h2 className="section-title">Ferramentas que já usei <span className="accent">em produção.</span></h2>
           <p className="section-sub">Stack construída ao longo de 3 anos de projetos reais — não de cursos. Confortável em qualquer camada, do banco ao deploy.</p>
         </div>
@@ -280,7 +331,7 @@ function Projects() {
     <section id="projetos">
       <div className="container">
         <div className="reveal">
-          <div className="section-eyebrow">04 / Projetos</div>
+          <div className="section-eyebrow">05 / Projetos</div>
           <h2 className="section-title">Projetos reais, <span className="accent">em produção.</span></h2>
           <p className="section-sub">Do zero ao deploy — construídos, mantidos e evoluídos em ambiente real.</p>
         </div>
@@ -530,7 +581,7 @@ function Contact() {
       <div className="container">
         <div className="contact-card reveal">
           <div>
-            <div className="section-eyebrow">05 / Contato</div>
+            <div className="section-eyebrow">06 / Contato</div>
             <h2>Vamos trabalhar <span className="accent">juntos?</span></h2>
             <p>Procuro uma posição pleno onde possa crescer dentro de um produto real. Confortável com remoto ou híbrido em SP. Ativo no GitHub e aberto a conversa.</p>
             <div className="actions">
@@ -575,6 +626,7 @@ function Contact() {
 window.Hero = Hero;
 window.About = About;
 window.Experience = Experience;
+window.Education = Education;
 window.Stack = Stack;
 window.Projects = Projects;
 window.Contact = Contact;
