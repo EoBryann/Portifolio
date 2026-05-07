@@ -110,7 +110,7 @@ function About() {
         </div>
         <div className="about-grid" style={{marginTop:32}}>
           <div className="avatar-card reveal">
-            <div className="av"></div>
+            <div className="av"><img src="assets/avatar.jpg" alt="Bryan Porto"/></div>
             <div className="name">Bryan Porto</div>
             <div className="role">@EoBryann · São Paulo, BR</div>
             <div className="avatar-stats">
