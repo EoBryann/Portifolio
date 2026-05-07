@@ -183,7 +183,7 @@ function Experience() {
       company: 'Ignis MKT / DNA Ignis',
       sub: 'Fundador · São Paulo',
       role: 'Desenvolvedor Full-stack',
-      period: '2023 — Atual',
+      period: '2026 — Atual',
       current: true,
       desc: 'Criação e operação do ecossistema SaaS DNA Ignis: CRM multi-tenant (27 páginas, 83 hooks, 25 Edge Functions), chatbot de pré-vendas com IA e hub de gestão interno — todos em produção com 11 containers Docker, Nginx e Cloudflare.',
       tags: ['React 18', 'TypeScript', 'Supabase', 'Docker', 'Deno', 'PostgreSQL', 'Nginx'],
