@@ -462,7 +462,7 @@ function Contact() {
                 <Icon.linkedin width="16" height="16"/>
                 LinkedIn
               </a>
-              <a className="btn btn-secondary" href="mailto:programaignis@gmail.com">
+              <a className="btn btn-secondary" href="mailto:bryanporto02@gmail.com">
                 <Icon.mail width="16" height="16"/>
                 Email
               </a>
@@ -479,9 +479,9 @@ function Contact() {
               <div className="meta"><span className="lbl">GitHub</span><span className="val">@EoBryann</span></div>
               <Icon.arrow width="14" height="14" className="arrow"/>
             </a>
-            <a className="contact-item" href="mailto:programaignis@gmail.com">
+            <a className="contact-item" href="mailto:bryanporto02@gmail.com">
               <Icon.mail width="22" height="22" className="ico"/>
-              <div className="meta"><span className="lbl">Email</span><span className="val">programaignis@gmail.com</span></div>
+              <div className="meta"><span className="lbl">Email</span><span className="val">bryanporto02@gmail.com</span></div>
               <Icon.arrow width="14" height="14" className="arrow"/>
             </a>
             <a className="contact-item" href="https://wa.me/5511955406211" target="_blank" rel="noreferrer">
