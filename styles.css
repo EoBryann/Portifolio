@@ -587,6 +587,42 @@ section { padding: 120px 0; position: relative; }
 }
 .proj-cat::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
 
+/* ===== EXPERIENCE TIMELINE ===== */
+.exp-timeline { display: flex; flex-direction: column; gap: 0; }
+.exp-item {
+  display: flex;
+  gap: 28px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.exp-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.exp-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  background: var(--surface-2);
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+.exp-item:first-child .exp-dot { border-color: var(--accent); background: var(--accent-soft); }
+.exp-body { flex: 1; min-width: 0; }
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+.exp-company { font-size: 18px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; margin: 0 0 2px; }
+.exp-role { font-size: 14px; color: var(--text-2); }
+.exp-period { font-family: var(--font-mono); font-size: 13px; white-space: nowrap; flex-shrink: 0; }
+.exp-desc { font-size: 15px; color: var(--text-2); line-height: 1.65; margin: 0; }
+
 /* ===== PROJECTS ===== */
 .projects {
   display: grid;

@@ -149,6 +149,69 @@ function About() {
   );
 }
 
+// ============ EXPERIENCE ============
+function Experience() {
+  const jobs = [
+    {
+      company: 'Cenosico Aduaneiras',
+      role: 'Desenvolvedor Full-stack',
+      period: '2024 — Atual',
+      current: true,
+      desc: 'Redesenho e desenvolvimento do ecossistema web da empresa. Criação de novos sites institucionais modernos e sistemas internos, substituindo stacks legadas por tecnologias atuais.',
+      tags: ['React', 'TypeScript', 'Tailwind', 'Vite'],
+    },
+    {
+      company: 'Wise System',
+      role: 'Desenvolvedor Web',
+      period: '2022 — 2024',
+      current: false,
+      desc: 'Desenvolvimento de sites e sistemas para clientes. Construção de interfaces e integrações com APIs, com transição progressiva de JavaScript vanilla para React + TypeScript.',
+      tags: ['JavaScript', 'React', 'C#', '.NET', 'REST API'],
+    },
+    {
+      company: 'Ignis MKT / DNA Ignis',
+      role: 'Fundador & Desenvolvedor Full-stack',
+      period: '2023 — Atual',
+      current: true,
+      desc: 'Criação e operação do ecossistema SaaS DNA Ignis: CRM multi-tenant, chatbot de pré-vendas com IA, hub interno e landing page — todos em produção com infra Docker própria.',
+      tags: ['React', 'TypeScript', 'Supabase', 'Docker', 'Deno', 'PostgreSQL'],
+    },
+  ];
+
+  return (
+    <section id="experiencia">
+      <div className="container">
+        <div className="reveal">
+          <div className="section-eyebrow">02 / Experiência</div>
+          <h2 className="section-title">Onde trabalhei e o que <span className="accent">construí.</span></h2>
+        </div>
+        <div className="exp-timeline" style={{marginTop: 40}}>
+          {jobs.map((job, i) => (
+            <div className="exp-item reveal" key={job.company} style={{'--d': `${i * 120}ms`}}>
+              <div className="exp-dot">
+                {job.current && <span className="pulse" style={{position:'absolute',inset:0,borderRadius:'50%'}}></span>}
+              </div>
+              <div className="exp-body">
+                <div className="exp-header">
+                  <div>
+                    <h3 className="exp-company">{job.company}</h3>
+                    <div className="exp-role">{job.role}</div>
+                  </div>
+                  <span className="exp-period" style={{color: job.current ? 'var(--accent)' : 'var(--text-3)'}}>{job.period}</span>
+                </div>
+                <p className="exp-desc">{job.desc}</p>
+                <div className="proj-stack" style={{marginTop: 12}}>
+                  {job.tags.map(t => <span key={t}>{t}</span>)}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ============ STACK ============
 function Stack() {
   const stack = [
@@ -169,7 +232,7 @@ function Stack() {
     <section id="stack">
       <div className="container">
         <div className="reveal">
-          <div className="section-eyebrow">02 / Stack</div>
+          <div className="section-eyebrow">03 / Stack</div>
           <h2 className="section-title">Ferramentas que já usei <span className="accent">em produção.</span></h2>
           <p className="section-sub">Stack construída ao longo de 3 anos de projetos reais — não de cursos. Confortável em qualquer camada, do banco ao deploy.</p>
         </div>
@@ -204,7 +267,7 @@ function Projects() {
     <section id="projetos">
       <div className="container">
         <div className="reveal">
-          <div className="section-eyebrow">03 / Projetos</div>
+          <div className="section-eyebrow">04 / Projetos</div>
           <h2 className="section-title">Projetos reais, <span className="accent">em produção.</span></h2>
           <p className="section-sub">Do zero ao deploy — construídos, mantidos e evoluídos em ambiente real.</p>
         </div>
@@ -454,7 +517,7 @@ function Contact() {
       <div className="container">
         <div className="contact-card reveal">
           <div>
-            <div className="section-eyebrow">04 / Contato</div>
+            <div className="section-eyebrow">05 / Contato</div>
             <h2>Vamos trabalhar <span className="accent">juntos?</span></h2>
             <p>Procuro uma posição pleno onde possa crescer dentro de um produto real. Confortável com remoto ou híbrido em SP. Ativo no GitHub e aberto a conversa.</p>
             <div className="actions">
@@ -498,6 +561,7 @@ function Contact() {
 
 window.Hero = Hero;
 window.About = About;
+window.Experience = Experience;
 window.Stack = Stack;
 window.Projects = Projects;
 window.Contact = Contact;
